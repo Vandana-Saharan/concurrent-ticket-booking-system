@@ -1,0 +1,33 @@
+# Java / Spring Boot
+backend/target/
+*.class
+*.log
+
+# Maven wrapper - keep these tracked
+!backend/.mvn/wrapper/maven-wrapper.properties
+!backend/mvnw
+!backend/mvnw.cmd
+
+# React / Vite
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+
+# IDE files
+.idea/
+.vscode/
+*.iml
+
+# Secrets
+.env
+.env.*
+!.env.example
+application-local.properties
+application-prod.properties
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Test coverage
+coverage/
