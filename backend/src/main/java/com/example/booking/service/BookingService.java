@@ -46,7 +46,11 @@ public class BookingService {
             Long id,
             String event,
             String seat,
-            String status) {}
+            String status,
+            java.time.LocalDateTime eventTime,
+            String venue,
+            double ticketPrice,
+            String imageUrl) {}
 
     private ResponseStatusException conflict(String message) {
         return new ResponseStatusException(
@@ -253,7 +257,11 @@ public class BookingService {
                 booking.getId(),
                 booking.getEvent().getTitle(),
                 booking.getSeat().getSeatNumber(),
-                booking.getStatus()
+                booking.getStatus(),
+                booking.getEvent().getEventTime(),
+                booking.getEvent().getVenue(),
+                booking.getEvent().getTicketPrice(),
+                booking.getEvent().getImageUrl()
         );
     }
 }

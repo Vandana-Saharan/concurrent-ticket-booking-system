@@ -26,11 +26,29 @@ export default function App() {
   }, []);
 
   if (error) {
-    return <p className="error">Error: {error}</p>;
+    return (
+      <main className="container">
+        <div className="notice-banner error">
+          <span className="notice-icon">⚠️</span>
+          <div>
+            <h3>Error connecting to server</h3>
+            <p>{error}</p>
+          </div>
+        </div>
+      </main>
+    );
   }
 
   if (!userId) {
-    return <p>Loading users...</p>;
+    return (
+      <main className="container">
+        <div className="loading-state">
+          <div className="spinner"></div>
+          <h2>Initializing TicketPulse...</h2>
+          <p>Connecting to demo users and backend services.</p>
+        </div>
+      </main>
+    );
   }
 
   return (

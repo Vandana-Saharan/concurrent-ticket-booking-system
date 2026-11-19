@@ -39,6 +39,8 @@ export const api = {
 
   getEvents: () => request("/events"),
 
+  getEvent: (eventId) => request(`/events/${eventId}`),
+
   getSeats: (eventId) =>
     request(`/events/${eventId}/seats`),
 
